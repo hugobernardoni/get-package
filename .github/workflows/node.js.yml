@@ -4,10 +4,7 @@
 name: Node.js CI
 
 on:
-  package:
-    action:
-      - published
-      - updated
+  workflow_dispatch:
 
 jobs:
   build:

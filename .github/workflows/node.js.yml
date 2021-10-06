@@ -13,8 +13,17 @@ jobs:
   build:
     name: Run API
     runs-on: ubuntu-latest
-    steps:
-      - name: Build API
-        run: |
-          echo "Build API"
-          sleep 10s
+    steps:      
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:  
+        node-version: '14'
+        registry-url: 'https://npm.pkg.github.com'          
+        # Defaults to the user or organization that owns the workflow file
+        scope: '@hugobernardoni'
+    - name: Test
+      run: yarn install --frozen-lockfile
+      env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}   
+    - name: Run
+      run: node index.js

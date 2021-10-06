@@ -22,7 +22,9 @@ jobs:
         # Defaults to the user or organization that owns the workflow file
         scope: '@hugobernardoni'
     - name: Test
-      run: yarn install --frozen-lockfile
+      run: | 
+        rm -f yarn.lock
+        yarn install --frozen-lockfile        
       env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}   
     - name: Run

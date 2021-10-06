@@ -1,1 +1,3 @@
 # get-package
+
+npm config set registry https://registry.npmjs.org/

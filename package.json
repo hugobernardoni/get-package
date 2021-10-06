@@ -2,7 +2,7 @@
   "name": "get-package",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,13 @@
     "url": "https://github.com/hugobernardoni/get-package/issues"
   },
   "homepage": "https://github.com/hugobernardoni/get-package#readme",
-  "dependencies": {
-    "@hugobernardoni/test-package": "^1.0.2"
+  "dependencies": {   
+    "@hugobernardoni/test-package": "^1.0.38"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.172",
+    "@types/node": "^16.6.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
   }
 }

@@ -1,5 +1,8 @@
 const { GetName } = require("@hugobernardoni/test-package");
 
-GetName("hugo");
+function main() {
+    var name = GetName("Hugo");
+    console.log(name);
+}
 
-
+main();

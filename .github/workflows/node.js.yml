@@ -23,7 +23,7 @@ jobs:
         scope: '@hugobernardoni'
     - name: Test
       run: | 
-        rm -f yarn.lock
+        yarn add @hugobernardoni/test-package
         yarn install --frozen-lockfile        
       env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}   
